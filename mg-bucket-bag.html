@@ -126,18 +126,15 @@
     /* Section 2 — Hero */
     .hero {
       width: 100%;
-      height: 700px;
       background: #e6e6dc;
       position: relative;
       overflow: hidden;
     }
 
     .hero__image {
-      position: absolute;
-      inset: 0;
       width: 100%;
-      height: 700px;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
       display: block;
     }
 
@@ -215,7 +212,7 @@
       display: grid;
       grid-template-columns: 50% 50%;
       align-items: stretch;
-      min-height: 600px;
+      min-height: 100%;
     }
 
     .material__image {
