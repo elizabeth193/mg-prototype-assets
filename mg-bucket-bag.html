@@ -303,54 +303,114 @@
 
     .product-card {
       background: #fff;
+      position: relative;
+    }
+
+    .product-card__media {
+      position: relative;
+      display: block;
+      width: 100%;
     }
 
     .product-card__image {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 0.8;
       object-fit: cover;
-      aspect-ratio: 3 / 4;
       display: block;
       background: #e6e6dc;
       border: none;
     }
 
+    .product-card__badge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 12px 15px;
+      font-family: "Supreme-LL", sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #000;
+      line-height: 1;
+    }
+
     .product-card__info {
-      padding: 10px 12px;
+      padding: 10px 18px 30px;
+    }
+
+    .product-card__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
     }
 
     .product-card__name {
       font-family: "Supreme-LL", sans-serif;
       font-size: 12px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #000;
+      flex: 1 1 0;
+      text-align: left;
     }
 
     .product-card__price {
       font-family: "Supreme-LL", sans-serif;
       font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #000;
+      flex: 1 1 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      flex-wrap: wrap;
+      text-align: right;
+    }
+
+    .product-card__original {
+      text-decoration: line-through;
       color: #787878;
-      margin-top: 4px;
+    }
+
+    .product-card__sale {
+      color: #000;
     }
 
     .product-card__swatches {
       display: flex;
-      gap: 4px;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-top: 8px;
     }
 
     .swatch {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      border: 1px solid #000;
-      box-sizing: border-box;
+      width: 9px;
+      height: 9px;
+      border-radius: 0;
+      display: inline-block;
+      background: #000;
+    }
+
+    .product-card__more-colors {
+      font-family: "Supreme-LL", sans-serif;
+      font-size: 11px;
+      color: #787878;
+      align-self: center;
     }
 
     .swatch--black { background: #000; }
-    .swatch--beige { background: #e6e6dc; }
-    .swatch--grey { background: #787878; }
+    .swatch--tan { background: #c9a876; }
+
+    @media (min-width: 601px) {
+      .product-card__info {
+        padding-bottom: 36px;
+      }
+    }
 
     /* Section 7 — FAQ */
     .faq {
@@ -608,98 +668,142 @@
   <section class="collection">
     <div class="product-grid">
       <div class="product-card">
-        <img class="product-card__image" src="https://cdn.shopify.com/s/files/1/0352/7949/files/HMB004VC_BlackFlamma_MiniBucket_Detail_3_600x600.jpg?v=1695398917" alt="MINI BUCKET BAG">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://cdn.shopify.com/s/files/1/0352/7949/files/HMB004VC_BlackFlamma_MiniBucket_Detail_3_600x600.jpg?v=1695398917" alt="MINI BUCKET BAG">
+          <span class="product-card__badge">SALE</span>
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">MINI BUCKET BAG</p>
-          <p class="product-card__price">$445</p>
+          <div class="product-card__row">
+            <p class="product-card__name">MINI BUCKET BAG</p>
+            <p class="product-card__price"><span class="product-card__original">$595</span><span class="product-card__sale">$385</span></p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#6b2c2c"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Black_Black_Detail1.jpg?quality=80&amp;v=1759420225&amp;width=2048" alt="BUCKET BAG">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Black_Black_Detail1.jpg?quality=80&amp;v=1759420225&amp;width=2048" alt="BUCKET BAG">
+          <span class="product-card__badge">NEW</span>
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">BUCKET BAG</p>
-          <p class="product-card__price">$595</p>
+          <div class="product-card__row">
+            <p class="product-card__name">BUCKET BAG</p>
+            <p class="product-card__price">$595</p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#787878"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_Mini-MiniFortunaBucket_Chocolate_WF25H190US_Detail1_add22ec2-8ad0-4128-8006-0bb1e246792f_1.jpg?quality=80&amp;v=1763996616&amp;width=2048" alt="MINI BUCKET BAG SPAZZOLATO">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_Mini-MiniFortunaBucket_Chocolate_WF25H190US_Detail1_add22ec2-8ad0-4128-8006-0bb1e246792f_1.jpg?quality=80&amp;v=1763996616&amp;width=2048" alt="MINI BUCKET BAG SPAZZOLATO">
+          <span class="product-card__badge">NEW</span>
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">MINI BUCKET BAG SPAZZOLATO</p>
-          <p class="product-card__price">$495</p>
+          <div class="product-card__row">
+            <p class="product-card__name">MINI BUCKET BAG SPAZZOLATO</p>
+            <p class="product-card__price">$495</p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#6b7c5c"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Anise_Anise_Detail1_2.jpg?quality=80&amp;v=1774531817&amp;width=2048" alt="THE BUCKET">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Anise_Anise_Detail1_2.jpg?quality=80&amp;v=1774531817&amp;width=2048" alt="THE BUCKET">
+          <span class="product-card__badge">NEW</span>
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">THE BUCKET</p>
-          <p class="product-card__price">$595</p>
+          <div class="product-card__row">
+            <p class="product-card__name">THE BUCKET</p>
+            <p class="product-card__price">$595</p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#6b2c2c"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniBucket_HMB004SP_LightGrey_Detail1.jpg?quality=80&amp;v=1773323907&amp;width=2048" alt="MINI BUCKET BAG">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniBucket_HMB004SP_LightGrey_Detail1.jpg?quality=80&amp;v=1773323907&amp;width=2048" alt="MINI BUCKET BAG">
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">MINI BUCKET BAG</p>
-          <p class="product-card__price">$445</p>
+          <div class="product-card__row">
+            <p class="product-card__name">MINI BUCKET BAG</p>
+            <p class="product-card__price">$445</p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#787878"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/HMB004VC_BlackFlamma_MiniBucket_Detail_4.jpg?quality=80&amp;v=1695398917&amp;width=2048" alt="BUCKET BAG NAPLAK">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/HMB004VC_BlackFlamma_MiniBucket_Detail_4.jpg?quality=80&amp;v=1695398917&amp;width=2048" alt="BUCKET BAG NAPLAK">
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">BUCKET BAG NAPLAK</p>
-          <p class="product-card__price">$545</p>
+          <div class="product-card__row">
+            <p class="product-card__name">BUCKET BAG NAPLAK</p>
+            <p class="product-card__price">$545</p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#6b7c5c"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniMiniBucket_HMM010SP_ZUCCHERO_ANISE_Detail1.jpg?quality=80&amp;v=1773324918&amp;width=2048" alt="MINI BUCKET BAG">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniMiniBucket_HMM010SP_ZUCCHERO_ANISE_Detail1.jpg?quality=80&amp;v=1773324918&amp;width=2048" alt="MINI BUCKET BAG">
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">MINI BUCKET BAG</p>
-          <p class="product-card__price">$495</p>
+          <div class="product-card__row">
+            <p class="product-card__name">MINI BUCKET BAG</p>
+            <p class="product-card__price">$495</p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#6b2c2c"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_CabasBucket_WF25H182KB_Black_Detail1_710a940a-e23f-4ca9-8a6b-1efd64571bae.jpg?quality=80&amp;v=1756913425&amp;width=2048" alt="BUCKET BAG">
+        <div class="product-card__media">
+          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_CabasBucket_WF25H182KB_Black_Detail1_710a940a-e23f-4ca9-8a6b-1efd64571bae.jpg?quality=80&amp;v=1756913425&amp;width=2048" alt="BUCKET BAG">
+        </div>
         <div class="product-card__info">
-          <p class="product-card__name">BUCKET BAG</p>
-          <p class="product-card__price">$595</p>
+          <div class="product-card__row">
+            <p class="product-card__name">BUCKET BAG</p>
+            <p class="product-card__price">$595</p>
+          </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--beige"></span>
-            <span class="swatch swatch--grey"></span>
+            <span class="swatch swatch--tan"></span>
+            <span class="swatch" style="background:#787878"></span>
+            <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
