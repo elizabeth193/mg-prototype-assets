@@ -129,19 +129,16 @@
       height: 560px;
       background: #e6e6dc;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
     }
 
-    .hero__placeholder {
-      font-family: "Supreme-LL", sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      color: #787878;
-      letter-spacing: 0.03em;
-      text-align: center;
-      padding: 0 18px;
+    .hero__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      display: block;
     }
 
     .hero__overlay {
@@ -222,17 +219,11 @@
     }
 
     .material__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       background: #787878;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Supreme-LL", sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      color: #fff;
-      letter-spacing: 0.03em;
-      text-align: center;
-      padding: 80px 18px;
     }
 
     .material__content {
@@ -318,7 +309,11 @@
     }
 
     .product-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       aspect-ratio: 3 / 4;
+      display: block;
       background: #e6e6dc;
       border: none;
     }
@@ -567,7 +562,7 @@
 
   <!-- Section 2 — Hero -->
   <section class="hero">
-    <div class="hero__placeholder">[EDITORIAL PHOTOGRAPHY — TO BE PROVIDED BY MANSUR GAVRIEL]</div>
+    <img class="hero__image" src="https://www.mansurgavriel.com/cdn/shop/files/Texture_Desktop_Tile1.jpg?quality=80&amp;v=1774462045&amp;width=2048" alt="Mansur Gavriel bucket bag editorial">
     <div class="hero__overlay">
       <h1>THE BUCKET BAG</h1>
       <p>Designed in New York. Crafted in Italy. Made to love and last.</p>
@@ -590,7 +585,7 @@
   <!-- Section 4 — Material -->
   <section class="material">
     <div class="material__inner">
-      <div class="material__image">[LEATHER DETAIL PHOTOGRAPHY]</div>
+      <img class="material__image" src="https://www.mansurgavriel.com/cdn/shop/files/PDP_Desktop_1.jpg?quality=80&amp;v=1754922668&amp;width=2048" alt="Leather detail">
       <div class="material__content">
         <p class="material__label">THE MATERIAL</p>
         <div class="material__text">
@@ -616,7 +611,7 @@
   <section class="collection">
     <div class="product-grid">
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://cdn.shopify.com/s/files/1/0352/7949/files/HMB004VC_BlackFlamma_MiniBucket_Detail_3_600x600.jpg?v=1695398917" alt="MINI BUCKET BAG">
         <div class="product-card__info">
           <p class="product-card__name">MINI BUCKET BAG</p>
           <p class="product-card__price">$445</p>
@@ -628,7 +623,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Black_Black_Detail1.jpg?quality=80&amp;v=1759420225&amp;width=2048" alt="BUCKET BAG">
         <div class="product-card__info">
           <p class="product-card__name">BUCKET BAG</p>
           <p class="product-card__price">$595</p>
@@ -640,7 +635,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_Mini-MiniFortunaBucket_Chocolate_WF25H190US_Detail1_add22ec2-8ad0-4128-8006-0bb1e246792f_1.jpg?quality=80&amp;v=1763996616&amp;width=2048" alt="MINI BUCKET BAG SPAZZOLATO">
         <div class="product-card__info">
           <p class="product-card__name">MINI BUCKET BAG SPAZZOLATO</p>
           <p class="product-card__price">$495</p>
@@ -652,7 +647,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Anise_Anise_Detail1_2.jpg?quality=80&amp;v=1774531817&amp;width=2048" alt="THE BUCKET">
         <div class="product-card__info">
           <p class="product-card__name">THE BUCKET</p>
           <p class="product-card__price">$595</p>
@@ -664,7 +659,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniBucket_HMB004SP_LightGrey_Detail1.jpg?quality=80&amp;v=1773323907&amp;width=2048" alt="MINI BUCKET BAG">
         <div class="product-card__info">
           <p class="product-card__name">MINI BUCKET BAG</p>
           <p class="product-card__price">$445</p>
@@ -676,7 +671,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/HMB004VC_BlackFlamma_MiniBucket_Detail_4.jpg?quality=80&amp;v=1695398917&amp;width=2048" alt="BUCKET BAG NAPLAK">
         <div class="product-card__info">
           <p class="product-card__name">BUCKET BAG NAPLAK</p>
           <p class="product-card__price">$545</p>
@@ -688,7 +683,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniMiniBucket_HMM010SP_ZUCCHERO_ANISE_Detail1.jpg?quality=80&amp;v=1773324918&amp;width=2048" alt="MINI BUCKET BAG">
         <div class="product-card__info">
           <p class="product-card__name">MINI BUCKET BAG</p>
           <p class="product-card__price">$495</p>
@@ -700,7 +695,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div class="product-card__image"></div>
+        <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_CabasBucket_WF25H182KB_Black_Detail1_710a940a-e23f-4ca9-8a6b-1efd64571bae.jpg?quality=80&amp;v=1756913425&amp;width=2048" alt="BUCKET BAG">
         <div class="product-card__info">
           <p class="product-card__name">BUCKET BAG</p>
           <p class="product-card__price">$595</p>
