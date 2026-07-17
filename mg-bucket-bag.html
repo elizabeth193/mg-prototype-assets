@@ -455,60 +455,6 @@
       text-transform: none;
     }
 
-    /* Section 8 — Footer */
-    .footer {
-      background: #000;
-      padding: 60px 18px;
-    }
-
-    .footer__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer__columns {
-      display: flex;
-      gap: 40px;
-    }
-
-    .footer__column {
-      flex: 1;
-    }
-
-    .footer__header {
-      font-family: "Supreme-LL", sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #fff;
-      margin-bottom: 24px;
-    }
-
-    .footer__link {
-      display: block;
-      font-family: "Supreme-LL", sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #787878;
-      margin-top: 16px;
-      text-decoration: none;
-    }
-
-    .footer__bottom {
-      margin-top: 60px;
-      border-top: 1px solid rgba(255,255,255,0.15);
-      padding-top: 24px;
-      text-align: center;
-    }
-
-    .footer__bottom p {
-      font-family: "Supreme-LL", sans-serif;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #787878;
-    }
 
     /* Prototype Label */
     .prototype-bar {
@@ -633,6 +579,27 @@ ul.has_submenu li.header__main-nav-item.is_active{color:var(--color-black)}.head
 .visually-hidden-select{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.shopify-section--header.header--sticking{height:var(--header-height)}sticky-header{display:block;width:100%;transition:transform .45s cubic-bezier(0.22,1,0.36,1)}sticky-header.is-fixed{position:fixed;top:0;left:0;right:0;z-index:9999}
 sticky-header.is-hidden{transform:translateY(-100%)}
 
+
+
+  :root { --font-body-1: var(--font-body); --font-body-1-text-transform: var(--font-body-text-transform); --font-body-1-letter-spacing: var(--font-body-letter-spacing); --grid-column: auto; }
+  .footer__logo svg { display:block; width:var(--logo-width-desktop); height:auto; }
+  .cta-button { appearance:none; background:transparent; border:0; padding:0; font:inherit; color:var(--color-black); cursor:pointer; }
+  .link { --link-font:var(--font-body); --link-text-transform:var(--font-body-text-transform); --link-letter-spacing:var(--font-body-letter-spacing); --link-underline-thickness:.1em; --link-underline-offset:.3em; --link-color:var(--color-black); --link-hover-color:var(--color-black); font:var(--link-font); text-transform:var(--link-text-transform); letter-spacing:var(--link-letter-spacing); display:inline-block; color:var(--link-color); text-decoration:none; position:relative; width:max-content; }
+  .link::after { position:absolute; content:""; display:block; width:100%; bottom:0; left:50%; margin-top:var(--link-underline-offset); border-bottom:var(--link-underline-thickness) solid transparent; transform:translateX(-50%); }
+  .link--underlined::after { border-color:var(--link-color); }
+
+.newsletter{display:flex;flex-direction:column;gap:var(--space-15);align-items:baseline;order:0;margin-bottom:var(--space-60);width:100%;font:var(--font-body);text-transform:var(--font-body-text-transform);letter-spacing:var(--font-body-letter-spacing)}@media(min-width:768px){.newsletter{margin-bottom:0}}.newsletter klaviyo-form{display:flex;height:100%;width:100%;flex-direction:column}
+.newsletter klaviyo-form form{display:flex;flex-direction:column;justify-content:space-between;height:100%;text-align:left;gap:var(--space-16)}.newsletter__success{display:none;color:var(--color-grey)}.newsletter klaviyo-form.success form{display:none}.newsletter klaviyo-form.success .newsletter__success{display:block}
+.footer{overflow:hidden;position:relative;z-index:5;padding:var(--space-60) var(--space-15) var(--space-30)}@media(min-width:768px){.footer{padding:var(--space-76) var(--space-18) var(--space-36)}}@media(min-width:768px){.footer .newsletter .cta-button{display:none}}.footer__logo{display:none}@media(min-width:768px){.footer__logo{display:block;margin-bottom:var(--space-36)}
+}.footer__container{display:flex;flex-direction:column}@media(min-width:768px){.footer__container{align-items:start;display:grid;grid-template-columns:3fr 1fr;grid-gap:var(--space-32) 0}}@media(min-width:768px){.footer__menu-columns{display:grid;grid-template-columns:repeat(3,1fr)}}.footer .footer__menus{order:2}
+@media(min-width:768px){.footer .footer__menus{order:0}}.footer__menu-summary{display:block}@media(min-width:768px){.footer__menu-summary{display:none;margin-bottom:var(--space-16)}}.footer__menu-summary::-webkit-details-marker{display:none}.footer__menu{list-style:none}@media(min-width:768px){.footer__menu{display:flex}
+}.footer .footer__menu-summary-icons--close{display:none}@media(min-width:768px){.footer .footer__menu-summary-icons--open{display:none}}.footer__menu-details{position:relative}.footer__menu-details::after{content:"";background:var(--color-dark-grey);display:block;opacity:.5;height:1px;right:0;bottom:0;left:0}
+@media(min-width:768px){.footer__menu-details::after{display:none}}.footer__menu-details[open] .footer__menu-summary-icons--open{display:none}.footer__menu-details[open] svg{transform:rotate(90deg)}.footer__menu-details[open] .footer__menu-summary-icons--close{display:block}@media(min-width:768px){.footer__menu-details[open] .footer__menu-summary-icons--close{display:none}
+}.footer__menu-summary{padding:0 0 var(--space-15) 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between}@media(min-width:768px){.footer__menu-summary{display:none;cursor:auto;padding:0}}.footer__menu-tier-1-item{width:100%}.footer__menu-tier-2-wrapper{transition:height var(--transition-large),opacity var(--transition-large);overflow:hidden;margin-bottom:var(--space-30)}
+@media(min-width:768px){.footer__menu-tier-2-wrapper{margin-bottom:0}}.footer__menu-tier-2{list-style:none;display:grid;gap:var(--space-8)}.footer__menu-tier-2-item{grid-column:var(--grid-column);padding-right:var(--space-16)}@media(min-width:768px){.footer__menu-tier-2-item{grid-column:unset}}.footer__menu-tier-2-link{font:var(--font-body-1);text-transform:var(--font-body-1-text-transform);letter-spacing:var(--font-body-1-letter-spacing);text-decoration:none;text-underline-offset:.2em}
+.footer__menu-tier-2-link:hover{text-decoration:none;color:var(--color-grey)}.footer .is-hidden{display:none}@media(min-width:768px){.footer .is-hidden{opacity:0;display:block;pointer-events:none}}.footer .legal_menu{display:block}@media(min-width:768px){.footer .legal_menu{display:none}}.footer__desktop-subfooter{display:none}
+@media(min-width:768px){.footer__desktop-subfooter{display:grid;grid-template-columns:3fr 1fr;grid-column:1/-1;justify-content:start}}.footer__desktop-subfooter .cta-button{justify-self:start}.footer__desktop-subfooter .cta-button:after{bottom:unset;margin:0}.footer__desktop-legal-menu{list-style:none}@media(min-width:768px){.footer__desktop-legal-menu{display:grid;grid-template-columns:repeat(3,1fr);row-gap:var(--space-8)}
+}
   </style>
 </head>
 <body>
@@ -997,33 +964,404 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 
   <!-- Section 8 — Footer -->
   <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__columns">
-        <div class="footer__column">
-          <p class="footer__header">SHOP</p>
-          <a href="#" class="footer__link">New Arrivals</a>
-          <a href="#" class="footer__link">Bags</a>
-          <a href="#" class="footer__link">Shoes</a>
-          <a href="#" class="footer__link">Accessories</a>
+  <div class="footer__logo">
+    <a href="/">
+    <svg xmlns="http://www.w3.org/2000/svg" width="185" height="14" viewBox="0 0 185 14" fill="none">
+      <g clip-path="url(#clip0_160_3157)">
+        <mask id="mask0_160_3157" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="185" height="14">
+          <path d="M184.343 0H0V14H184.343V0Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_160_3157)">
+          <path d="M78.9411 6.20667H77.7745V2.44533H78.9411C79.8558 2.44533 80.3038 2.64133 80.6585 2.996C80.9945 3.332 81.1811 3.76133 81.1811 4.32133C81.1811 4.88133 81.0038 5.30133 80.6585 5.64667C80.3038 5.98267 79.8558 6.19733 78.9411 6.19733M77.7745 7.63467L81.7038 13.7293H84.4571L80.8078 8.148C82.5251 7.66267 83.6545 6.05733 83.6545 4.26533C83.6545 3.11733 83.2251 2.13733 82.4878 1.41867C81.7225 0.690667 80.7331 0.242667 79.2211 0.242667H75.3571V13.72H77.7745V7.62533V7.63467ZM65.9585 13.9813C67.5358 13.9813 68.9078 13.3933 69.8411 12.46C70.7185 11.5827 71.1851 10.472 71.1851 8.848V0.252H68.7678V8.68933C68.7678 9.78133 68.5158 10.388 68.0305 10.8733C67.5265 11.3773 66.7985 11.676 65.9585 11.676C65.1185 11.676 64.3905 11.368 63.8865 10.8733C63.4011 10.388 63.1585 9.78133 63.1585 8.68933V0.252H60.7411V8.848C60.7411 10.472 61.2078 11.5827 62.0851 12.46C63.0185 13.3933 64.3905 13.9813 65.9678 13.9813M52.8825 13.9813C55.5238 13.9813 57.4558 12.0867 57.4558 9.72533C57.4558 8.02667 56.4571 6.42133 54.2731 5.60933L52.3785 4.90933C51.5385 4.57333 51.3611 4.032 51.3611 3.62133C51.3611 2.856 51.9678 2.296 52.8078 2.296C53.5078 2.296 54.0211 2.688 54.2171 3.248L56.4198 2.156C55.8318 0.877333 54.4691 0 52.8078 0C50.5585 0 48.8785 1.57733 48.8785 3.63067C48.8785 5.13333 49.7185 6.50533 51.6691 7.24267L53.5265 7.924C54.5998 8.33467 54.9731 9.072 54.9731 9.72533C54.9731 10.8173 54.1145 11.676 52.8825 11.676C51.7905 11.676 50.8945 11.032 50.6611 10.1173L48.2438 10.5467C48.6731 12.516 50.5305 13.9813 52.8731 13.9813M35.2705 0.252H32.7691V13.7293H35.1491V4.02267H35.1678L42.3545 13.7293H44.8558V0.252H42.4758V9.95867H42.4571L35.2705 0.252ZM23.4078 3.304L25.4425 8.63333H21.3265L23.3611 3.304H23.3985H23.4078ZM24.6585 0.252H22.2131L16.8838 13.7293H19.3478L20.5145 10.78H26.2918L27.4585 13.7293H29.9971L24.6585 0.252Z" fill="black"/>
+        </g>
+        <path d="M11.5547 0.252001L7.04667 6.79467L2.53867 0.252001H0V13.7293H2.38V4.508H2.41733L6.26267 10.08H7.784L11.6387 4.508H11.676V13.7293H14.056V0.252001H11.5547Z" fill="black"/>
+        <mask id="mask1_160_3157" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="185" height="14">
+          <path d="M184.343 0H0V14H184.343V0Z" fill="white"/>
+        </mask>
+        <g mask="url(#mask1_160_3157)">
+          <path d="M158.713 0.270666H156.296V13.748H158.713V0.270666ZM147.009 6.22533H145.843V2.464H147.009C147.924 2.464 148.372 2.66 148.727 3.01467C149.063 3.35067 149.249 3.78 149.249 4.34C149.249 4.9 149.072 5.32 148.727 5.66533C148.372 6.00133 147.924 6.216 147.009 6.216M145.843 7.65333L149.772 13.748H152.525L148.876 8.16667C150.593 7.68133 151.723 6.076 151.723 4.284C151.723 3.136 151.293 2.156 150.556 1.43733C149.791 0.699999 148.801 0.261333 147.28 0.261333H143.416V13.7387H145.833V7.644L145.843 7.65333ZM135.716 13.748L140.616 0.270666H138.171L134.699 10.0333L131.227 0.270666H128.744L133.644 13.748H135.716ZM121.651 3.32267L123.685 8.652H119.579L121.613 3.32267H121.651ZM122.901 0.270666H120.456L115.127 13.748H117.591L118.757 10.7987H124.535L125.701 13.748H128.24L122.911 0.270666H122.901ZM113.083 6.73867H107.249V8.81067H110.544C110.077 10.5093 108.575 11.6853 106.68 11.6853C104.104 11.6853 102.135 9.66933 102.135 7.01867C102.135 4.368 104.011 2.31467 106.531 2.31467C108.192 2.31467 109.592 3.136 110.395 4.48L112.345 3.192C111.151 1.27867 109.023 0.00933266 106.531 0.00933266C102.62 0.00933266 99.6426 3.09867 99.6426 7C99.6426 10.9013 102.713 13.9907 106.745 13.9907C110.376 13.9907 113.111 11.0973 113.111 7.37333C113.111 7.15867 113.092 6.944 113.073 6.72933" fill="black"/>
+        </g>
+        <path d="M163.688 0.270666V13.748H171.127V11.5173H166.105V7.756H171.033V5.52533H166.105V2.50133H171.127V0.270666H163.688Z" fill="black"/>
+        <path d="M171.836 11.5173H163.8V13.748H171.836V11.5173Z" fill="black"/>
+        <path d="M171.658 5.52533H163.8V7.756H171.658V5.52533Z" fill="black"/>
+        <path d="M171.836 0.270666H163.8V2.50133H171.836V0.270666Z" fill="black"/>
+        <path d="M176.223 0.270666V13.748H182.961V11.5173H178.631V0.270666H176.223Z" fill="black"/>
+        <path d="M184.343 11.5173H176.307V13.748H184.343V11.5173Z" fill="black"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_160_3157">
+          <rect width="184.343" height="14" fill="white"/>
+        </clipPath>
+      </defs>
+    </svg>
+      <span class="visually-hidden">MANSUR GAVRIEL</span>
+    </a>
+  </div>
+  <div class="footer__container">
+    <div class="footer__menus">
+      <div class="footer__menu-columns">
+        <div class="footer__menu">
+            <div class="footer__menu-tier-1-item">
+              <div allow-toggle-when="(max-width: 767px)">
+                <details class="footer__menu-details">
+                  <summary class="footer__menu-summary body-all-caps">
+                    About
+    <svg
+      class="icon icon--caret-right footer__menu-summary-icons--close"
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="10"
+      viewBox="0 0 8 10"
+      fill="none"
+    >
+      <path d="M1 1C2.95262 2.5621 4.04738 3.4379 6 5L1 9" stroke="black" stroke-width="1.5"/>
+    </svg>
+    <svg
+      class="icon icon--caret-down footer__menu-summary-icons--open"
+      width="10"
+      height="8"
+      viewBox="0 0 10 8"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1.375 1C2.9371 2.95262 3.8129 4.04738 5.375 6L9.375 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+                  </summary>
+                  <div class="footer__menu-tier-2-wrapper" data-content>
+                    <div class="footer__menu-tier-2">
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/brand-story"
+                            class="footer__menu-tier-2-link"
+                          >Brand Story</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="https://resale.mansurgavriel.com/"
+                            class="footer__menu-tier-2-link"
+                          >Resale</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/products/gift-card"
+                            class="footer__menu-tier-2-link"
+                          >Gift Cards</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/materials"
+                            class="footer__menu-tier-2-link"
+                          >Care</a>
+                        </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
         </div>
-        <div class="footer__column">
-          <p class="footer__header">ABOUT</p>
-          <a href="#" class="footer__link">Brand Story</a>
-          <a href="#" class="footer__link">Sustainability</a>
-          <a href="#" class="footer__link">Careers</a>
+        <div class="footer__menu">
+            <div class="footer__menu-tier-1-item">
+              <div allow-toggle-when="(max-width: 767px)">
+                <details class="footer__menu-details">
+                  <summary class="footer__menu-summary body-all-caps">
+                    Customer Care
+    <svg
+      class="icon icon--caret-right footer__menu-summary-icons--close"
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="10"
+      viewBox="0 0 8 10"
+      fill="none"
+    >
+      <path d="M1 1C2.95262 2.5621 4.04738 3.4379 6 5L1 9" stroke="black" stroke-width="1.5"/>
+    </svg>
+    <svg
+      class="icon icon--caret-down footer__menu-summary-icons--open"
+      width="10"
+      height="8"
+      viewBox="0 0 10 8"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1.375 1C2.9371 2.95262 3.8129 4.04738 5.375 6L9.375 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+                  </summary>
+                  <div class="footer__menu-tier-2-wrapper" data-content>
+                    <div class="footer__menu-tier-2">
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/frequently-asked-questions"
+                            class="footer__menu-tier-2-link"
+                          >FAQ</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/stockists-1"
+                            class="footer__menu-tier-2-link"
+                          >Stockists</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="https://returns.mansurgavriel.com/#/"
+                            class="footer__menu-tier-2-link"
+                          >Returns</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="https://returns.mansurgavriel.com/#/withdrawal"
+                            class="footer__menu-tier-2-link"
+                          >Right of Withdrawal</a>
+                        </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
         </div>
-        <div class="footer__column">
-          <p class="footer__header">ACCOUNT</p>
-          <a href="#" class="footer__link">My Account</a>
-          <a href="#" class="footer__link">Orders</a>
-          <a href="#" class="footer__link">Returns</a>
+        <div class="footer__menu">
+            <div class="footer__menu-tier-1-item">
+              <div allow-toggle-when="(max-width: 767px)">
+                <details class="footer__menu-details">
+                  <summary class="footer__menu-summary body-all-caps">
+                    Connect
+    <svg
+      class="icon icon--caret-right footer__menu-summary-icons--close"
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="10"
+      viewBox="0 0 8 10"
+      fill="none"
+    >
+      <path d="M1 1C2.95262 2.5621 4.04738 3.4379 6 5L1 9" stroke="black" stroke-width="1.5"/>
+    </svg>
+    <svg
+      class="icon icon--caret-down footer__menu-summary-icons--open"
+      width="10"
+      height="8"
+      viewBox="0 0 10 8"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1.375 1C2.9371 2.95262 3.8129 4.04738 5.375 6L9.375 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+                  </summary>
+                  <div class="footer__menu-tier-2-wrapper" data-content>
+                    <div class="footer__menu-tier-2">
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/contact-us"
+                            class="footer__menu-tier-2-link"
+                          >Contact Us</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="https://www.instagram.com/mansurgavriel"
+                            class="footer__menu-tier-2-link"
+                          >Instagram</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="https://www.tiktok.com/@mansurgavriel"
+                            class="footer__menu-tier-2-link"
+                          >TikTok</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="https://www.pinterest.com/mansurgavriel/"
+                            class="footer__menu-tier-2-link"
+                          >Pinteret</a>
+                        </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
         </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2026 MANSUR GAVRIEL</p>
+        <div class="footer__menu legal_menu">
+            <div class="footer__menu-tier-1-item">
+              <div allow-toggle-when="(max-width: 767px)">
+                <details class="footer__menu-details">
+                  <summary class="footer__menu-summary body-all-caps">
+                    Legal
+    <svg
+      class="icon icon--caret-right footer__menu-summary-icons--close"
+      xmlns="http://www.w3.org/2000/svg"
+      width="8"
+      height="10"
+      viewBox="0 0 8 10"
+      fill="none"
+    >
+      <path d="M1 1C2.95262 2.5621 4.04738 3.4379 6 5L1 9" stroke="black" stroke-width="1.5"/>
+    </svg>
+    <svg
+      class="icon icon--caret-down footer__menu-summary-icons--open"
+      width="10"
+      height="8"
+      viewBox="0 0 10 8"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1.375 1C2.9371 2.95262 3.8129 4.04738 5.375 6L9.375 1" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+                  </summary>
+                  <div class="footer__menu-tier-2-wrapper" data-content>
+                    <div class="footer__menu-tier-2">
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/website-accessibility"
+                            class="footer__menu-tier-2-link"
+                          >Accessibility</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/terms"
+                            class="footer__menu-tier-2-link"
+                          >Terms & Conditions</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="/pages/terms"
+                            class="footer__menu-tier-2-link"
+                          >Privacy and Cookie Policy</a>
+                        </div>
+                        <div
+                          class="footer__menu-tier-2-item"
+                        >
+                          <a
+                            href="https://dsrp.pii.ai/p/907ef06a-dffb-4174-afa8-6a965027a8ca/submit.html"
+                            class="footer__menu-tier-2-link"
+                          >Data Subject Request</a>
+                        </div>
+                          <div class="footer__menu-tier-2-item">
+                            <a onClick="showPopup()" class="footer__menu-tier-2-link">Do Not Sell Or Share</a>
+                          </div>
+                          <div class="footer__menu-tier-2-item">
+                            <a  class="footer__menu-tier-2-link pieeye-cookie-setting">Cookie Settings</a>
+                          </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
-  </footer>
+    <div class="newsletter">
+  <klaviyo-form>
+    <form
+      id="footer-newsletter-form"
+      action="//manage.kmail-lists.com/subscriptions/subscribe"
+      data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe"
+      method="GET"
+      target="_blank"
+      novalidate="novalidate"
+      data-list-id="XATEaP"
+    >
+      <div class="newsletter__title body-all-caps">
+        Sign up to our newsletter
+      </div>
+      <input type="hidden" name="g" value="XATEaP">
+      <input type="hidden" name="$fields" value="$consent">
+      <input type="hidden" name="$list_fields" value="$consent">
+      <label class="input-label">
+        <span class="visually-hidden">Email address</span>
+        <input
+          name="email"
+          placeholder="Email address"
+          data-error-message="Please enter a valid email address"
+        >
+        <span class="input-label__error"></span>
+      </label>
+      <button class="cta-button link link--underlined">
+        Submit
+      </button>
+    </form>
+    <div class="newsletter__success">
+      Thank you for signing up.
+    </div>
+  </klaviyo-form>
+</div>
+    <div class="footer__desktop-subfooter">
+      <ul class="footer__desktop-legal-menu">
+            <li
+              class="footer__menu-tier-2-item"
+            >
+              <a
+                href="/pages/website-accessibility"
+                class="footer__menu-tier-2-link"
+              >Accessibility</a>
+            </li>
+            <li
+              class="footer__menu-tier-2-item"
+            >
+              <a
+                href="/pages/terms"
+                class="footer__menu-tier-2-link"
+              >Terms & Conditions</a>
+            </li>
+            <li
+              class="footer__menu-tier-2-item"
+            >
+              <a
+                href="/pages/terms"
+                class="footer__menu-tier-2-link"
+              >Privacy and Cookie Policy</a>
+            </li>
+            <li
+              class="footer__menu-tier-2-item"
+            >
+              <a
+                href="https://dsrp.pii.ai/p/907ef06a-dffb-4174-afa8-6a965027a8ca/submit.html"
+                class="footer__menu-tier-2-link"
+              >Data Subject Request</a>
+            </li>
+              <li class="footer__menu-tier-2-item">
+                <a onClick="showPopup()" class="footer__menu-tier-2-link" style="cursor: pointer">Do Not Sell Or Share</a>
+              </li>
+              <li class="footer__menu-tier-2-item">
+                <a  class="footer__menu-tier-2-link pieeye-cookie-setting" style="cursor: pointer">Cookie Settings</a>
+              </li>
+      </ul>
+      <button
+        class="cta-button link link--underlined"
+        type="submit"
+        form="footer-newsletter-form"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</footer>
 
   <!-- Prototype Label -->
   <div class="prototype-bar">
