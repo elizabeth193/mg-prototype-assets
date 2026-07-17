@@ -7,15 +7,17 @@
   <style>
     @font-face {
       font-family: "Supreme-LL";
-      src: url("https://raw.githubusercontent.com/elizabeth193/mg-prototype-assets/main/MGSupremeWeb-BoldFlat.woff2") format("woff2");
+      src: url("https://cdn.jsdelivr.net/gh/elizabeth193/mg-prototype-assets@main/MGSupremeWeb-BoldFlat.woff2") format("woff2");
       font-weight: 700;
       font-style: normal;
+      font-display: swap;
     }
     @font-face {
       font-family: "InterVariable";
-      src: url("https://raw.githubusercontent.com/elizabeth193/mg-prototype-assets/main/InterVariable-latin-1751944278923.woff2") format("woff2");
+      src: url("https://cdn.jsdelivr.net/gh/elizabeth193/mg-prototype-assets@main/InterVariable-latin-1751944278923.woff2") format("woff2");
       font-weight: 100 900;
       font-style: normal;
+      font-display: swap;
     }
 
     :root {
@@ -172,7 +174,7 @@
     /* Section 3 — Origin Story */
     .origin {
       background: #fff;
-      padding: 80px 18px;
+      padding: 100px 18px;
     }
 
     .origin__inner {
@@ -213,12 +215,13 @@
     .material__inner {
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      align-items: stretch;
+      min-height: 100%;
     }
 
     .material__image {
-      width: 50%;
-      min-height: 100%;
       background: #787878;
       display: flex;
       align-items: center;
@@ -233,7 +236,6 @@
     }
 
     .material__content {
-      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -270,7 +272,12 @@
       background: #fff;
       border-top: 1px solid #e6e6dc;
       border-bottom: 1px solid #e6e6dc;
-      padding: 16px 18px;
+      padding: 0 18px;
+    }
+
+    .subnav__links a {
+      display: inline-block;
+      padding: 20px 0;
     }
 
     .subnav__links {
@@ -285,6 +292,8 @@
       letter-spacing: 0.05em;
       color: #787878;
       text-decoration: none;
+      padding: 20px 0;
+      display: inline-block;
     }
 
     .subnav__links a.active {
@@ -515,7 +524,7 @@
     }
 
     body {
-      padding-bottom: 44px;
+      padding-bottom: 70px;
     }
 
     @media (max-width: 900px) {
@@ -524,12 +533,7 @@
       }
 
       .material__inner {
-        flex-direction: column;
-      }
-
-      .material__image,
-      .material__content {
-        width: 100%;
+        grid-template-columns: 1fr;
       }
 
       .footer__columns {
