@@ -414,12 +414,39 @@
     .journal__media {
       order: 1;
       width: 100%;
-      height: 100%;
       overflow: hidden;
     }
 
     .journal__entry--reverse .journal__media {
       order: 2;
+    }
+
+    .journal__media img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      height: auto;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      background: #e6e6dc;
+    }
+
+    .journal__media--atelier img {
+      object-position: center 30%;
+    }
+
+    .journal__media--drawstring img {
+      object-position: center 20%;
+    }
+
+    .journal__media--leather img {
+      object-position: center center;
+    }
+
+    @media (max-width: 900px) {
+      .journal__media img {
+        aspect-ratio: 1 / 1;
+      }
     }
 
     .journal__body {
@@ -432,15 +459,6 @@
 
     .journal__entry--reverse .journal__body {
       order: 1;
-    }
-
-    .journal__media img {
-      width: 100%;
-      height: 100%;
-      min-height: 480px;
-      object-fit: cover;
-      display: block;
-      background: #e6e6dc;
     }
 
     .journal__title {
@@ -679,7 +697,7 @@
       }
 
       .journal__media img {
-        min-height: 360px;
+        aspect-ratio: 1 / 1;
       }
     }
 
@@ -1087,7 +1105,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
     <div class="journal__list">
 
       <div class="journal__entry">
-        <div class="journal__media">
+        <div class="journal__media journal__media--atelier">
           <img src="https://cdn.shopify.com/s/files/1/0352/7949/files/Craft_Page_Desktop_Tile1.jpg?v=1782230665" alt="Artisan hand-cutting leather in the atelier" loading="lazy">
         </div>
         <div class="journal__body">
@@ -1109,7 +1127,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
 
       <div class="journal__entry journal__entry--reverse">
-        <div class="journal__media">
+        <div class="journal__media journal__media--drawstring">
           <img src="https://cdn.shopify.com/s/files/1/0352/7949/files/SPR26_DrawstringCabas_WF25H182RS_Natural_Detail1.jpg?v=1775571725" alt="Close-up of the bucket bag drawstring closure" loading="lazy">
         </div>
         <div class="journal__body">
@@ -1131,7 +1149,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
 
       <div class="journal__entry">
-        <div class="journal__media">
+        <div class="journal__media journal__media--leather">
           <img src="https://cdn.shopify.com/s/files/1/0352/7949/files/VegTan_Care_ContentBlock.jpg?v=1693937110" alt="Two bucket bags in black, worn together" loading="lazy">
         </div>
         <div class="journal__body">
