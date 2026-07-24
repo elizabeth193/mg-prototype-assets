@@ -260,7 +260,7 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
       width: 100%;
     }
@@ -793,6 +793,32 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 .footer__menu-tier-2-link:hover{text-decoration:none;color:var(--color-grey)}.footer .is-hidden{display:none}@media(min-width:768px){.footer .is-hidden{opacity:0;display:block;pointer-events:none}}.footer .legal_menu{display:block}@media(min-width:768px){.footer .legal_menu{display:none}}.footer__desktop-subfooter{display:none}
 @media(min-width:768px){.footer__desktop-subfooter{display:grid;grid-template-columns:3fr 1fr;grid-column:1/-1;justify-content:start}}.footer__desktop-subfooter .cta-button{justify-self:start}.footer__desktop-subfooter .cta-button:after{bottom:unset;margin:0}.footer__desktop-legal-menu{list-style:none}@media(min-width:768px){.footer__desktop-legal-menu{display:grid;grid-template-columns:repeat(3,1fr);row-gap:var(--space-8)}
 }
+
+    /* Section 6.5 — Editorial */
+    .editorial {
+      background: #fff;
+      padding-bottom: 60px;
+    }
+
+    .editorial__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      width: 100%;
+    }
+
+    .editorial__grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .editorial__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
@@ -901,7 +927,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 
   <!-- Section 2 — Hero -->
   <section class="hero">
-    <img class="hero__image" src="https://www.mansurgavriel.com/cdn/shop/files/Texture_Desktop_Tile1.jpg?quality=80&amp;v=1774462045&amp;width=2048" alt="Mansur Gavriel bucket bag editorial">
+    <img class="hero__image" src="images/AW25_CabasBucket_WF25H182KB_Black_Detail1_710a940a-e23f-4ca9-8a6b-1efd64571bae.jpg" alt="Mansur Gavriel bucket bag editorial">
     <div class="hero__overlay">
       <h1>THE BUCKET BAG</h1>
       <p>Designed in New York. Crafted in Italy. Made to love and last.</p>
@@ -924,7 +950,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
   <!-- Section 4 — Material -->
   <section class="material">
     <div class="material__inner">
-      <img class="material__image" src="https://www.mansurgavriel.com/cdn/shop/files/PDP_Desktop_1.jpg?quality=80&amp;v=1754922668&amp;width=2048" alt="Leather detail">
+      <img class="material__image" src="images/HMB004VC_BlackFlamma_MiniBucket_Detail_4.jpg" alt="Leather detail">
       <div class="material__content">
         <p class="material__label">THE MATERIAL</p>
         <div class="material__text">
@@ -951,7 +977,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
     <div class="product-grid">
       <div class="product-card">
         <div class="product-card__media">
-          <img class="product-card__image" src="https://cdn.shopify.com/s/files/1/0352/7949/files/HMB004VC_BlackFlamma_MiniBucket_Detail_3_600x600.jpg?v=1695398917" alt="MINI BUCKET BAG">
+          <img class="product-card__image" src="images/HMB004VC_BlackFlamma_MiniBucket_Detail_3_600x600.jpg" alt="MINI BUCKET BAG">
           <span class="product-card__badge">SALE</span>
         </div>
         <div class="product-card__info">
@@ -969,7 +995,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
       <div class="product-card">
         <div class="product-card__media">
-          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Black_Black_Detail1.jpg?quality=80&amp;v=1759420225&amp;width=2048" alt="BUCKET BAG">
+          <img class="product-card__image" src="images/PS26_CabasBucket_WF25H182WS_Black_Black_Detail1.jpg" alt="BUCKET BAG">
           <span class="product-card__badge">NEW</span>
         </div>
         <div class="product-card__info">
@@ -987,7 +1013,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
       <div class="product-card">
         <div class="product-card__media">
-          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_Mini-MiniFortunaBucket_Chocolate_WF25H190US_Detail1_add22ec2-8ad0-4128-8006-0bb1e246792f_1.jpg?quality=80&amp;v=1763996616&amp;width=2048" alt="MINI BUCKET BAG SPAZZOLATO">
+          <img class="product-card__image" src="images/AW25_Mini-MiniFortunaBucket_Chocolate_WF25H190US_Detail1_add22ec2-8ad0-4128-8006-0bb1e246792f_1.jpg" alt="MINI BUCKET BAG SPAZZOLATO">
           <span class="product-card__badge">NEW</span>
         </div>
         <div class="product-card__info">
@@ -1005,7 +1031,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
       <div class="product-card">
         <div class="product-card__media">
-          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/PS26_CabasBucket_WF25H182WS_Anise_Anise_Detail1_2.jpg?quality=80&amp;v=1774531817&amp;width=2048" alt="THE BUCKET">
+          <img class="product-card__image" src="images/PS26_CabasBucket_WF25H182WS_Anise_Anise_Detail1_2.jpg" alt="THE BUCKET">
           <span class="product-card__badge">NEW</span>
         </div>
         <div class="product-card__info">
@@ -1023,7 +1049,8 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
       <div class="product-card">
         <div class="product-card__media">
-          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniBucket_HMB004SP_LightGrey_Detail1.jpg?quality=80&amp;v=1773323907&amp;width=2048" alt="MINI BUCKET BAG">
+          <img class="product-card__image" src="images/SS26_MiniBucket_HMB004SP_LightGrey_Detail1.jpg" alt="MINI BUCKET BAG">
+          
         </div>
         <div class="product-card__info">
           <div class="product-card__row">
@@ -1040,24 +1067,8 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
       <div class="product-card">
         <div class="product-card__media">
-          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/HMB004VC_BlackFlamma_MiniBucket_Detail_4.jpg?quality=80&amp;v=1695398917&amp;width=2048" alt="BUCKET BAG NAPLAK">
-        </div>
-        <div class="product-card__info">
-          <div class="product-card__row">
-            <p class="product-card__name">BUCKET BAG NAPLAK</p>
-            <p class="product-card__price">$545</p>
-          </div>
-          <div class="product-card__swatches">
-            <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--tan"></span>
-            <span class="swatch" style="background:#6b7c5c"></span>
-            <span class="product-card__more-colors">+9 colors</span>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-card__media">
-          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/SS26_MiniMiniBucket_HMM010SP_ZUCCHERO_ANISE_Detail1.jpg?quality=80&amp;v=1773324918&amp;width=2048" alt="MINI BUCKET BAG">
+          <img class="product-card__image" src="images/SS26_MiniMiniBucket_HMM010SP_ZUCCHERO_ANISE_Detail1.jpg" alt="MINI BUCKET BAG">
+          
         </div>
         <div class="product-card__info">
           <div class="product-card__row">
@@ -1074,21 +1085,64 @@ sticky-header.is-hidden{transform:translateY(-100%)}
       </div>
       <div class="product-card">
         <div class="product-card__media">
-          <img class="product-card__image" src="https://www.mansurgavriel.com/cdn/shop/files/AW25_CabasBucket_WF25H182KB_Black_Detail1_710a940a-e23f-4ca9-8a6b-1efd64571bae.jpg?quality=80&amp;v=1756913425&amp;width=2048" alt="BUCKET BAG">
+          <img class="product-card__image" src="images/mini_bucket_black_oro_2_138577d2-fc35-4d04-8204-13aa7f411c74.jpg" alt="MINI BUCKET BAG BLACK/ORO">
+          
         </div>
         <div class="product-card__info">
           <div class="product-card__row">
-            <p class="product-card__name">BUCKET BAG</p>
+            <p class="product-card__name">MINI BUCKET BAG BLACK/ORO</p>
             <p class="product-card__price">$595</p>
           </div>
           <div class="product-card__swatches">
             <span class="swatch swatch--black"></span>
-            <span class="swatch swatch--tan"></span>
-            <span class="swatch" style="background:#787878"></span>
             <span class="product-card__more-colors">+9 colors</span>
           </div>
         </div>
       </div>
+      <div class="product-card">
+        <div class="product-card__media">
+          <img class="product-card__image" src="images/mini_bucket_cammello_royal_2_19069ff4-b7d5-4e95-b7a0-6e0f0453630f.jpg" alt="MINI BUCKET BAG CAMMELLO/ROYAL">
+          
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__row">
+            <p class="product-card__name">MINI BUCKET BAG CAMMELLO/ROYAL</p>
+            <p class="product-card__price">$595</p>
+          </div>
+          <div class="product-card__swatches">
+            <span class="swatch swatch--tan"></span>
+            <span class="product-card__more-colors">+9 colors</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__media">
+          <img class="product-card__image" src="images/mini_bucket_white_blu_2_53ce70be-3deb-4887-9a6a-76580a052d91.jpg" alt="MINI BUCKET BAG WHITE/BLU">
+          
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__row">
+            <p class="product-card__name">MINI BUCKET BAG WHITE/BLU</p>
+            <p class="product-card__price">$595</p>
+          </div>
+          <div class="product-card__swatches">
+            <span class="swatch swatch--black"></span>
+            <span class="product-card__more-colors">+9 colors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6.5 — Editorial -->
+  <section class="editorial">
+    <div class="editorial__grid">
+      <img src="images/93570022.jpg" alt="Mansur Gavriel bucket bags" loading="lazy">
+      <img src="images/img_marigold.jpg" alt="Marigold field" loading="lazy">
+      <img src="images/img_redwater.jpg" alt="Red water" loading="lazy">
+      <img src="images/img_sugar.jpg" alt="Sugar" loading="lazy">
+      <img src="images/img_gerbera.webp" alt="Gerbera" loading="lazy">
+      <img src="images/img_tools.png" alt="Tools" loading="lazy">
     </div>
   </section>
 
@@ -1101,7 +1155,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 
       <div class="journal__entry">
         <div class="journal__media journal__media--atelier">
-          <img src="https://cdn.shopify.com/s/files/1/0352/7949/files/Craft_Page_Desktop_Tile1.jpg?v=1782230665" alt="Artisan hand-cutting leather in the atelier" loading="lazy">
+          <img src="images/Craft_Page_Desktop_Tile1.jpg" alt="Artisan hand-cutting leather in the atelier" loading="lazy">
         </div>
         <div class="journal__body">
           <p class="journal__title">In The Atelier</p>
@@ -1123,7 +1177,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 
       <div class="journal__entry journal__entry--reverse">
         <div class="journal__media journal__media--drawstring">
-          <img src="https://cdn.shopify.com/s/files/1/0352/7949/files/SPR26_DrawstringCabas_WF25H182RS_Natural_Detail1.jpg?v=1775571725" alt="Close-up of the bucket bag drawstring closure" loading="lazy">
+          <img src="images/SPR26_DrawstringCabas_WF25H182RS_Natural_Detail1.jpg" alt="Close-up of the bucket bag drawstring closure" loading="lazy">
         </div>
         <div class="journal__body">
           <p class="journal__title">On The Drawstring</p>
@@ -1145,7 +1199,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 
       <div class="journal__entry">
         <div class="journal__media journal__media--leather">
-          <img src="https://cdn.shopify.com/s/files/1/0352/7949/files/VegTan_Care_ContentBlock.jpg?v=1693937110" alt="Two bucket bags in black, worn together" loading="lazy">
+          <img src="images/VegTan_Care_ContentBlock.jpg" alt="Two bucket bags in black, worn together" loading="lazy">
         </div>
         <div class="journal__body">
           <p class="journal__title">Living With Leather</p>
