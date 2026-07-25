@@ -375,15 +375,16 @@
       }
     }
 
-    /* Section 6.5 — Journal */
+    /* Section 6.5 — Journal (grid + text-underneath, MG reference style) */
     .journal {
       background: #fff;
+      padding-top: 40px;
     }
 
     .journal__header {
       max-width: 680px;
       margin: 0 auto;
-      padding: 100px 18px 0;
+      padding: 60px 18px 40px;
     }
 
     .journal__label {
@@ -392,119 +393,59 @@
       text-transform: uppercase;
       color: #787878;
       letter-spacing: 0.05em;
+      text-align: center;
     }
 
-    .journal__list {
-      display: flex;
-      flex-direction: column;
-      margin-top: 60px;
-    }
-
-    .journal__entry {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
+    /* image grid — edge to edge, touching (no gutter), like Brand Story / Materials */
+    .journal__grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 0;
-      border-top: 1px solid #e6e6dc;
-    }
-
-    .journal__media {
       width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
     }
 
-    .journal__entry--reverse .journal__media {
-      order: 2;
-    }
-
-    .journal__media img {
+    .journal__cell img {
       width: 100%;
-      height: 100%;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 0.82;
       object-fit: cover;
-      object-position: center center;
       display: block;
-      margin: 0;
-      padding: 0;
+      background: #e6e6dc;
     }
 
-    .journal__media--atelier img {
-      object-position: center 30%;
+    /* text row underneath, aligned to the grid columns */
+    .journal__texts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      width: 100%;
     }
 
-    .journal__media--drawstring img {
-      object-position: center 20%;
-    }
-
-    .journal__media--leather img {
-      object-position: center center;
-    }
-
-    .journal__body {
-      background: #fff;
-      margin: 0;
-      padding: 80px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .journal__entry--reverse .journal__body {
-      order: 1;
+    .journal__text {
+      padding: 32px 40px 80px;
     }
 
     .journal__title {
       font-family: "Supreme-LL", sans-serif;
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #000;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
-    .journal__teaser {
+    .journal__text p {
       font-family: "Supreme-LL", sans-serif;
       font-size: 12px;
       font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: 0.03em;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
       color: #000;
-      text-transform: none;
-      max-width: 420px;
-    }
-
-    .journal__content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-
-    .journal__content-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      padding-top: 20px;
-      max-width: 420px;
-    }
-
-    .journal__content-inner p {
-      font-family: "Supreme-LL", sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: 0.03em;
-      color: #000;
-      text-transform: none;
     }
 
     .journal__shop-link {
       display: inline-block;
+      margin-top: 20px;
       font-family: "Supreme-LL", sans-serif;
       font-size: 12px;
       font-weight: 700;
@@ -513,43 +454,15 @@
       color: #000;
       text-decoration: underline;
       text-underline-offset: 3px;
-      margin-top: 4px;
     }
 
-    .journal__shop-link:hover {
-      color: #787878;
-    }
+    .journal__shop-link:hover { color: #787878; }
 
-    .journal__entry.is-open .journal__content {
-      max-height: 600px;
-    }
-
-    .journal__toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 20px;
-      font-family: "Supreme-LL", sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #787878;
-      padding: 0;
-    }
-
-    .journal__toggle:hover {
-      color: #000;
-    }
-
-    .journal__toggle-icon {
-      font-size: 13px;
-      line-height: 1;
-      transition: transform 0.3s ease;
-    }
-
-    .journal__entry.is-open .journal__toggle-icon {
-      transform: rotate(45deg);
+    @media (max-width: 700px) {
+      .journal__grid { grid-template-columns: 1fr; }
+      .journal__texts { grid-template-columns: 1fr; }
+      .journal__text { padding: 28px 24px 48px; }
+      .journal__cell img { aspect-ratio: 1.1; }
     }
 
     /* Editorial Flow — Option A (interleaved) */
@@ -1233,74 +1146,37 @@ sticky-header.is-hidden{transform:translateY(-100%)}
     <div class="journal__header">
       <p class="journal__label">NOTES</p>
     </div>
-    <div class="journal__list">
 
-      <div class="journal__entry">
-        <div class="journal__media journal__media--atelier">
-          <img src="images/Craft_Page_Desktop_Tile1.jpg" alt="Artisan hand-cutting leather in the atelier" loading="lazy">
-        </div>
-        <div class="journal__body">
-          <p class="journal__title">In The Atelier</p>
-          <p class="journal__teaser">Each bag passes through many hands before it leaves the workshop.</p>
-          <div class="journal__content">
-            <div class="journal__content-inner">
-              <p>The leather arrives in hides, not sheets. A pattern cutter works around the natural marks of the material, since vegetable-tanned leather is not uniform and is not meant to be.</p>
-              <p>The body is cut, the drawstring channel is set, and the bag is turned by hand before stitching. Nothing is glued that can be sewn.</p>
-              <p>A single artisan typically sees a bag through most of its construction, rather than passing it down a line. This is closer to how it was made in 2013 than to how most leather goods are made now.</p>
-              <a href="#" class="journal__shop-link">Shop The Bucket Bag →</a>
-            </div>
-          </div>
-          <button class="journal__toggle" aria-expanded="false">
-            <span class="journal__toggle-label">Read More</span>
-            <span class="journal__toggle-icon">+</span>
-          </button>
-        </div>
+    <!-- image grid: edge-to-edge, touching, MG two-up/three-up pattern -->
+    <div class="journal__grid">
+      <div class="journal__cell">
+        <img src="images/Craft_Page_Desktop_Tile1.jpg" alt="Artisan hand-cutting leather in the atelier" loading="lazy">
       </div>
-
-      <div class="journal__entry journal__entry--reverse">
-        <div class="journal__media journal__media--drawstring">
-          <img src="images/SPR26_DrawstringCabas_WF25H182RS_Natural_Detail1.jpg" alt="Close-up of the bucket bag drawstring closure" loading="lazy">
-        </div>
-        <div class="journal__body">
-          <p class="journal__title">On The Drawstring</p>
-          <p class="journal__teaser">No hardware, no clasp, no branding. The bag closes because it is asked to.</p>
-          <div class="journal__content">
-            <div class="journal__content-inner">
-              <p>Most bags close with a clasp, a zipper, or a logo-stamped hook. The bucket bag closes with a length of leather cord run through its own body.</p>
-              <p>It was an unusual choice in 2013, when logo hardware signaled value. Removing it was the point. The bag was designed to be recognized by its shape, not its fastenings.</p>
-              <p>Pulled loose, the bag opens fully into a flat interior. Cinched, it holds its form. Both states are intentional.</p>
-              <a href="#" class="journal__shop-link">Shop The Mini →</a>
-            </div>
-          </div>
-          <button class="journal__toggle" aria-expanded="false">
-            <span class="journal__toggle-label">Read More</span>
-            <span class="journal__toggle-icon">+</span>
-          </button>
-        </div>
+      <div class="journal__cell">
+        <img src="images/SPR26_DrawstringCabas_WF25H182RS_Natural_Detail1.jpg" alt="Close-up of the bucket bag drawstring closure" loading="lazy">
       </div>
-
-      <div class="journal__entry">
-        <div class="journal__media journal__media--leather">
-          <img src="images/VegTan_Care_ContentBlock.jpg" alt="Two bucket bags in black, worn together" loading="lazy">
-        </div>
-        <div class="journal__body">
-          <p class="journal__title">Living With Leather</p>
-          <p class="journal__teaser">Every bag darkens differently. That is the record of how you use it.</p>
-          <div class="journal__content">
-            <div class="journal__content-inner">
-              <p>Vegetable-tanned leather has no protective topcoat. It reacts to what touches it: hand oils, sunlight, the inside of a bag, the strap of a coat.</p>
-              <p>A bag carried daily in warm climates will darken faster than one used occasionally. Lighter colorways such as Zucchero or Light Grey show this most visibly; darker colorways such as Black or Chocolate show it more slowly.</p>
-              <p>Rotating between two bags, rather than carrying one continuously, slows the pace of change and keeps the color more even over time. Neither approach is more correct. It is a matter of preference.</p>
-              <a href="#" class="journal__shop-link">Shop All Colors →</a>
-            </div>
-          </div>
-          <button class="journal__toggle" aria-expanded="false">
-            <span class="journal__toggle-label">Read More</span>
-            <span class="journal__toggle-icon">+</span>
-          </button>
-        </div>
+      <div class="journal__cell">
+        <img src="images/VegTan_Care_ContentBlock.jpg" alt="Two bucket bags in black, worn together" loading="lazy">
       </div>
+    </div>
 
+    <!-- text underneath, in a matching three-column row -->
+    <div class="journal__texts">
+      <div class="journal__text">
+        <p class="journal__title">In The Atelier</p>
+        <p>The leather arrives in hides, not sheets. A pattern cutter works around the natural marks of the material, since vegetable-tanned leather is not uniform and is not meant to be. The body is cut, the drawstring channel set, and the bag turned by hand before stitching. Nothing is glued that can be sewn.</p>
+        <a href="#" class="journal__shop-link">Shop The Bucket Bag →</a>
+      </div>
+      <div class="journal__text">
+        <p class="journal__title">On The Drawstring</p>
+        <p>No hardware, no clasp, no branding. The bucket bag closes with a length of leather cord run through its own body. It was an unusual choice in 2013, when logo hardware signaled value. Removing it was the point — the bag is recognized by its shape, not its fastenings.</p>
+        <a href="#" class="journal__shop-link">Shop The Mini →</a>
+      </div>
+      <div class="journal__text">
+        <p class="journal__title">Living With Leather</p>
+        <p>Vegetable-tanned leather has no protective topcoat. It reacts to what touches it: hand oils, sunlight, the strap of a coat. Every bag darkens differently over time. That is not a flaw. It is the record of how you use it.</p>
+        <a href="#" class="journal__shop-link">Shop All Colors →</a>
+      </div>
     </div>
   </section>
 
@@ -1784,18 +1660,6 @@ sticky-header.is-hidden{transform:translateY(-100%)}
   </div>
 
   <script>
-    document.querySelectorAll('.journal__toggle').forEach(function(button) {
-      button.addEventListener('click', function() {
-        const entry = button.closest('.journal__entry');
-        const isOpen = entry.classList.contains('is-open');
-        const label = button.querySelector('.journal__toggle-label');
-
-        entry.classList.toggle('is-open', !isOpen);
-        button.setAttribute('aria-expanded', String(!isOpen));
-        label.textContent = isOpen ? 'Read More' : 'Read Less';
-      });
-    });
-
     document.querySelectorAll('.accordion__question').forEach(function(button) {
       button.addEventListener('click', function() {
         const item = button.parentElement;
