@@ -478,6 +478,12 @@
     }
     .ed-image--tall img { height: 100vh; }
     .ed-image--wide img { height: 70vh; }
+    .ed-size-comparison img {
+      width: 100%;
+      height: auto !important;
+      object-fit: contain;
+      display: block;
+    }
 
     .ed-caption {
       text-align: center;
@@ -964,8 +970,8 @@ sticky-header.is-hidden{transform:translateY(-100%)}
   </div>
 
   <!-- Beat: Size comparison — bucket family -->
-  <div class="ed-image ed-image--wide">
-    <img src="images/Bucket_Fam.png" alt="Bucket bag size comparison: Mini, Mini Mini, and Standard" style="width:100%; height:auto; object-fit:contain;">
+  <div class="ed-image ed-size-comparison">
+    <img src="images/Bucket_Fam.png" alt="Bucket bag size comparison: Mini, Mini Mini, and Standard">
   </div>
 
   <!-- Section 5 — Collection Subnav -->
