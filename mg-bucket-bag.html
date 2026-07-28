@@ -273,7 +273,7 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #787878;
-      margin-bottom: 56px;
+      margin-bottom: 24px;
     }
 
     .sizes__row {
@@ -291,17 +291,24 @@
       align-items: center;
     }
 
-    .sizes__item img {
+    .sizes__item__frame {
       width: 100%;
-      height: auto;
+      height: 380px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .sizes__item img {
+      width: auto;
       object-fit: contain;
       display: block;
     }
 
-    /* scale each bag to its true relative size */
-    .sizes__item--bucket img   { max-width: 100%; }
-    .sizes__item--mini img     { max-width: 80%; }
-    .sizes__item--minimini img { max-width: 64%; }
+    /* scale each bag to its true relative size (matches physical height ratios) */
+    .sizes__item--bucket img   { height: 100%; }
+    .sizes__item--mini img     { height: 80%; }
+    .sizes__item--minimini img { height: 64%; }
 
     .sizes__name {
       font-family: "Supreme-LL", sans-serif;
@@ -322,8 +329,9 @@
 
     @media (max-width: 600px) {
       .sizes { padding: var(--section-pad-y-mobile) 18px; }
-      .sizes__label { margin-bottom: 32px; }
+      .sizes__label { margin-bottom: 16px; }
       .sizes__row { max-width: 100%; gap: 12px; }
+      .sizes__item__frame { height: 220px; }
       .sizes__name { font-size: 10px; margin-top: 14px; }
       .sizes__dim { font-size: 9px; }
     }
@@ -493,7 +501,7 @@
     .journal__header {
       max-width: 680px;
       margin: 0 auto;
-      padding: var(--section-pad-y) 18px 40px;
+      padding: var(--section-pad-y) 18px 16px;
     }
 
     .journal__label {
@@ -649,7 +657,7 @@
     .ed-product {
       display: block;
       background: #fff;
-      padding: 18% 24% 12%;
+      padding: 8% 22% 4%;
     }
     .ed-product img {
       width: 100%;
@@ -659,7 +667,7 @@
     }
     .ed-product__meta {
       text-align: center;
-      padding: 16px 8px 28px;
+      padding: 8px 8px 28px;
     }
     .ed-product__name {
       font-family: "Supreme-LL", sans-serif;
@@ -681,7 +689,7 @@
       .ed-image--wide img { height: 46vh; }
       .ed-text { padding: var(--section-pad-y-mobile) 24px; }
       .ed-products, .ed-products--two { grid-template-columns: 1fr 1fr; }
-      .journal__header { padding: var(--section-pad-y-mobile) 18px 32px; }
+      .journal__header { padding: var(--section-pad-y-mobile) 18px 16px; }
     }
 
     /* Section 7 — FAQ */
@@ -1125,17 +1133,17 @@ sticky-header.is-hidden{transform:translateY(-100%)}
     <p class="sizes__label">THE SIZES</p>
     <div class="sizes__row">
       <div class="sizes__item sizes__item--bucket">
-        <img src="images/Bucket.png" alt="Bucket Bag in black leather with red interior">
+        <div class="sizes__item__frame"><img src="images/Bucket.png" alt="Bucket Bag in black leather with red interior"></div>
         <p class="sizes__name">Bucket</p>
         <p class="sizes__dim">9" W × 12.2" H</p>
       </div>
       <div class="sizes__item sizes__item--mini">
-        <img src="images/Mini.png" alt="Mini Bucket Bag in black leather">
+        <div class="sizes__item__frame"><img src="images/Mini.png" alt="Mini Bucket Bag in black leather"></div>
         <p class="sizes__name">Mini</p>
         <p class="sizes__dim">7" W × 9.8" H</p>
       </div>
       <div class="sizes__item sizes__item--minimini">
-        <img src="images/Mini-Mini.png" alt="Mini Mini Bucket Bag in black leather">
+        <div class="sizes__item__frame"><img src="images/Mini-Mini.png" alt="Mini Mini Bucket Bag in black leather"></div>
         <p class="sizes__name">Mini Mini</p>
         <p class="sizes__dim">5.9" W × 7.9" H</p>
       </div>
