@@ -25,6 +25,8 @@
       --color-grey: #787878;
       --color-beige: #e6e6dc;
       --color-white: #fff;
+      --section-pad-y: 110px;
+      --section-pad-y-mobile: 64px;
       --font-primary: "Supreme-LL", sans-serif;
       --font-body-size: 12px;
       --font-body-weight: 700;
@@ -218,8 +220,99 @@
       text-transform: none;
     }
 
-    /* Section 5 — Collection Subnav */
-    .subnav {
+    /* Emotional grid — MG two-up + wide band */
+    .emotive__pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      width: 100%;
+    }
+    .emotive__pair img {
+      width: 100%;
+      aspect-ratio: 0.75;
+      object-fit: cover;
+      display: block;
+    }
+    .emotive__wide img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .emotive__wide img { height: 52vh; }
+    }
+
+    /* Section 4.5 — Size comparison */
+    .sizes {
+      background: #fff;
+      text-align: center;
+      padding: var(--section-pad-y) 24px;
+    }
+
+    .sizes__label {
+      font-family: "Supreme-LL", sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #787878;
+      margin-bottom: 56px;
+    }
+
+    .sizes__row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      align-items: end;
+    }
+
+    .sizes__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sizes__item img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* scale each bag to its true relative size */
+    .sizes__item--bucket img   { max-width: 100%; }
+    .sizes__item--mini img     { max-width: 80%; }
+    .sizes__item--minimini img { max-width: 64%; }
+
+    .sizes__name {
+      font-family: "Supreme-LL", sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #000;
+      margin-top: 24px;
+    }
+
+    .sizes__dim {
+      font-family: "Supreme-LL", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      color: #787878;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 600px) {
+      .sizes { padding: var(--section-pad-y-mobile) 18px; }
+      .sizes__label { margin-bottom: 32px; }
+      .sizes__row { gap: 12px; }
+      .sizes__name { font-size: 10px; margin-top: 14px; }
+      .sizes__dim { font-size: 9px; }
+    }
+
+    /* Section 5 — Collection Subnav */    .subnav {
       background: #fff;
       border-top: 1px solid #e6e6dc;
       border-bottom: 1px solid #e6e6dc;
@@ -384,7 +477,7 @@
     .journal__header {
       max-width: 680px;
       margin: 0 auto;
-      padding: 60px 18px 40px;
+      padding: var(--section-pad-y) 18px 40px;
     }
 
     .journal__label {
@@ -478,12 +571,6 @@
     }
     .ed-image--tall img { height: 100vh; }
     .ed-image--wide img { height: 70vh; }
-    .ed-size-comparison img {
-      width: 100%;
-      height: auto !important;
-      object-fit: contain;
-      display: block;
-    }
 
     .ed-caption {
       text-align: center;
@@ -498,8 +585,12 @@
     .ed-text {
       max-width: 620px;
       margin: 0 auto;
-      padding: 110px 24px;
+      padding: var(--section-pad-y) 24px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .ed-text__label {
       font-family: "Supreme-LL", sans-serif;
@@ -542,11 +633,12 @@
     .ed-product {
       display: block;
       background: #f2f0ea;
+      padding: 12% 18% 8%;
     }
     .ed-product img {
       width: 100%;
       aspect-ratio: 0.82;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
     .ed-product__meta {
@@ -571,8 +663,9 @@
       .ed-image img { height: 68vh; }
       .ed-image--tall img { height: 80vh; }
       .ed-image--wide img { height: 46vh; }
-      .ed-text { padding: 70px 24px; }
+      .ed-text { padding: var(--section-pad-y-mobile) 24px; }
       .ed-products, .ed-products--two { grid-template-columns: 1fr 1fr; }
+      .journal__header { padding: var(--section-pad-y-mobile) 18px 32px; }
     }
 
     /* Section 7 — FAQ */
@@ -923,7 +1016,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 
   <!-- Section 2 — Hero -->
   <section class="hero">
-    <img class="hero__image" src="images/93570022.jpg" alt="Mansur Gavriel bucket bags in dark green leather with signature red interior">
+    <img class="hero__image" src="images/img_hero_tan.jpg" alt="Mansur Gavriel bucket bags in camel leather on a pale green ground with a butterfly">
     <div class="hero__caption">
       <h1>THE BUCKET BAG</h1>
       <p>Designed in New York. Crafted in Italy. Made to love and last.</p>
@@ -931,6 +1024,17 @@ sticky-header.is-hidden{transform:translateY(-100%)}
   </section>
 
   <!-- ===== EDITORIAL FLOW (Option A) ===== -->
+
+  <!-- Beat 1: Marigold field → Origin -->
+  <div class="ed-image ed-image--tall">
+    <img src="images/img_marigold.jpg" alt="Figure walking through a field of marigolds">
+  </div>
+  <div class="ed-text">
+    <p class="ed-text__label">THE BUCKET BAG</p>
+    <p>In 2013, Rachel Mansur and Floriana Gavriel introduced a bag with no logo and no hardware, closed with a drawstring. Natural leather on the outside, a quiet colour within.</p>
+    <p>It was designed with restraint, and recognised for it. Within a few years it had entered the permanent collection of the Victoria and Albert Museum.</p>
+    <p>Dreamt up in New York and made with artisans in Italy, it is still made the same way today.</p>
+  </div>
 
   <!-- Beat 2: woven product moment -->
   <div class="ed-products">
@@ -969,10 +1073,36 @@ sticky-header.is-hidden{transform:translateY(-100%)}
     <a href="#" class="ed-text__link">Shop The Bucket Bag →</a>
   </div>
 
-  <!-- Beat: Size comparison — bucket family -->
-  <div class="ed-image ed-size-comparison">
-    <img src="images/Bucket_Fam.png" alt="Bucket bag size comparison: Mini, Mini Mini, and Standard">
+  <!-- Emotional grid: sunflower + blue bucket side by side, coffee below -->
+  <div class="emotive__pair">
+    <img src="images/img_sunflower.jpg" alt="Sunflower in bloom, seen from behind">
+    <img src="images/img_bluebucket.jpg" alt="Blue Mansur Gavriel bucket bag held with a sprig of yellow flowers">
   </div>
+  <div class="emotive__wide">
+    <img src="images/img_coffee.jpg" alt="Espresso in a red cup on a green café table">
+  </div>
+
+  <!-- Section 4.5 — Size comparison -->
+  <section class="sizes">
+    <p class="sizes__label">THE SIZES</p>
+    <div class="sizes__row">
+      <div class="sizes__item sizes__item--bucket">
+        <img src="images/size_bucket.jpg" alt="Bucket Bag in black leather with red interior">
+        <p class="sizes__name">Bucket</p>
+        <p class="sizes__dim">9" W × 12.2" H</p>
+      </div>
+      <div class="sizes__item sizes__item--mini">
+        <img src="images/size_mini.jpg" alt="Mini Bucket Bag in black leather">
+        <p class="sizes__name">Mini</p>
+        <p class="sizes__dim">7" W × 9.8" H</p>
+      </div>
+      <div class="sizes__item sizes__item--minimini">
+        <img src="images/size_minimini.jpg" alt="Mini Mini Bucket Bag in black leather with red interior">
+        <p class="sizes__name">Mini Mini</p>
+        <p class="sizes__dim">5.9" W × 7.9" H</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Section 5 — Collection Subnav -->
   <section class="subnav">
@@ -1133,7 +1263,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
   <!-- Section 6.5 — Journal (continues the editorial flow) -->
   <section class="journal">
     <div class="journal__header">
-      <p class="journal__label">NOTES</p>
+      <p class="journal__label">THE DETAILS</p>
     </div>
 
     <!-- image grid: edge-to-edge, touching, MG two-up/three-up pattern -->
@@ -1216,7 +1346,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
             <span class="accordion__icon">+</span>
           </button>
           <div class="accordion__answer">
-            <p>The bucket bag is available in Mini and Standard sizes, with select seasonal and material variations.</p>
+            <p>The Mansur Gavriel Bucket Bag is primarily available in three core sizes: the classic Bucket Bag, the largest; the Mini Bucket Bag, the medium and most popular size; and the Mini Mini Bucket Bag, the smallest in current production.</p>
           </div>
         </div>
         <div class="accordion__item">
