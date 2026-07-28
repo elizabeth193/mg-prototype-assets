@@ -224,7 +224,7 @@
     .emotive__pair {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0;
+      gap: 24px;
       width: 100%;
     }
     .emotive__pair img {
@@ -233,15 +233,20 @@
       object-fit: cover;
       display: block;
     }
+    .emotive__wide {
+      text-align: center;
+      padding: 0 0 0;
+    }
     .emotive__wide img {
       width: 100%;
-      height: 70vh;
-      object-fit: cover;
-      object-position: center 40%;
+      max-width: 520px;
+      height: auto;
+      object-fit: contain;
       display: block;
+      margin: 0 auto;
     }
     @media (max-width: 600px) {
-      .emotive__wide img { height: 52vh; }
+      .emotive__wide img { max-width: 100%; }
     }
 
     /* Section 4.5 — Size comparison */
@@ -1025,10 +1030,7 @@ sticky-header.is-hidden{transform:translateY(-100%)}
 
   <!-- ===== EDITORIAL FLOW (Option A) ===== -->
 
-  <!-- Beat 1: Marigold field → Origin -->
-  <div class="ed-image ed-image--tall">
-    <img src="images/img_marigold.jpg" alt="Figure walking through a field of marigolds">
-  </div>
+  <!-- Beat 1: Origin -->
   <div class="ed-text">
     <p class="ed-text__label">THE BUCKET BAG</p>
     <p>In 2013, Rachel Mansur and Floriana Gavriel introduced a bag with no logo and no hardware, closed with a drawstring. Natural leather on the outside, a quiet colour within.</p>
