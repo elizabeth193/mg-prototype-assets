@@ -310,6 +310,13 @@
     .sizes__item--mini img     { height: 80%; }
     .sizes__item--minimini img { height: 64%; }
 
+    /* recenter each bag's visual mass (torso) within its frame — the source
+       photos include a dangling strap that skews the bounding box, so a
+       small horizontal shift compensates for the strap's uneven weight */
+    .sizes__item--bucket img   { transform: translateX(-7.5%); }
+    .sizes__item--mini img     { transform: translateX(-3.2%); }
+    .sizes__item--minimini img { transform: translateX(-7.67%); }
+
     .sizes__name {
       font-family: "Supreme-LL", sans-serif;
       font-size: 12px;
