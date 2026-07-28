@@ -1,8 +1,8 @@
 from pathlib import Path
 html = Path('mg-bucket-bag.html').read_text()
 assert 'img_marigold' not in html, 'FAIL: topiary/marigold still referenced'
-assert 'gap: 24px' in html, 'FAIL: emotional grid gap missing'
-assert 'max-width: 520px' in html, 'FAIL: coffee portrait sizing missing'
+assert 'gap: 2px' in html, 'FAIL: emotional grid hairline gap missing'
+assert 'max-width: 1040px' in html, 'FAIL: coffee portrait sizing missing'
 import re
 refs = sorted(set(re.findall(r'src="images/([^"]+)"', html)))
 problems = [n for n in refs if not (Path('images')/n).exists() or (Path('images')/n).stat().st_size < 1000]
