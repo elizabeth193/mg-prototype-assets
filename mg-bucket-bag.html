@@ -276,9 +276,13 @@
       margin-bottom: 24px;
     }
 
+    /* column widths are proportional to each bag's true rendered footprint
+       (tuned height ratio x each source photo's aspect ratio), so every
+       image always fills its column exactly at any viewport width —
+       no fixed pixel heights, no width-based clipping, no breakpoints. */
     .sizes__row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1.04fr 0.75fr 0.72fr;
       gap: 16px;
       max-width: 1400px;
       margin: 0 auto;
@@ -289,26 +293,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-width: 0;
     }
 
     .sizes__item__frame {
       width: 100%;
-      height: 480px;
+      min-width: 0;
       display: flex;
       align-items: flex-end;
       justify-content: center;
     }
 
     .sizes__item img {
-      width: auto;
-      object-fit: contain;
+      width: 100%;
+      height: auto;
       display: block;
     }
-
-    /* scale each bag to its true relative size (matches physical height ratios) */
-    .sizes__item--bucket img   { height: 100%; }
-    .sizes__item--mini img     { height: 80%; }
-    .sizes__item--minimini img { height: 64%; }
 
     /* recenter each bag's visual mass (torso) within its frame — the source
        photos include a dangling strap that skews the bounding box, so a
@@ -338,7 +338,6 @@
       .sizes { padding: var(--section-pad-y-mobile) 18px; }
       .sizes__label { margin-bottom: 16px; }
       .sizes__row { max-width: 100%; gap: 8px; }
-      .sizes__item__frame { height: 260px; }
       .sizes__name { font-size: 10px; margin-top: 14px; }
       .sizes__dim { font-size: 9px; }
     }
